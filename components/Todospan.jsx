@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import {
   IconCheck,
   IconTrash,
   IconArrowUp,
   IconArrowDown,
 } from "@tabler/icons";
-import Todospan from "./Todospan";
 
-export default function Todo(props) {
+export default function Todospan(props) {
   const [isMouseOver, setIsMouseOver] = useState(false);
   return (
     <div
@@ -34,16 +34,10 @@ export default function Todo(props) {
           <button className="btn btn-success" onClick={() => props.onMark()}>
             <IconCheck />
           </button>
-          <button
-            className="btn btn-secondary"
-            onClick={() => props.onMoveUp()}
-          >
+          <button className="btn btn-secondary">
             <IconArrowUp />
           </button>
-          <button
-            className="btn btn-secondary"
-            onClick={() => props.onMoveDown()}
-          >
+          <button className="btn btn-secondary">
             <IconArrowDown />
           </button>
           <button className="btn btn-danger" onClick={() => props.onDelete()}>
